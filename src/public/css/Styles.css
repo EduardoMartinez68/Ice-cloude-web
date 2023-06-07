@@ -1,0 +1,23 @@
+/**/
+.btn-success{
+    background-color: rgb(57,78,194);
+    width: 100%;
+}
+
+.btn-success:hover{
+    background-color: rgb(46, 62, 151);
+}
+
+.form-group{
+    padding: 8px;
+}
+
+lable{
+    font-size: 13px;
+    color: rgba(0,0,0,.5);
+    padding: 2px;
+}
+
+body{
+    background-color: rgb(246,245,248);
+}

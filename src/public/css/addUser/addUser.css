@@ -1,0 +1,10 @@
+.logoCompany{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 25px;
+}
+
+.terms-conditions{
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
