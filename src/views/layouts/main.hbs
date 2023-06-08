@@ -12,28 +12,20 @@
     
     <!-- my CSS -->
     <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/Styles.css">
 
     <!-- CUSTOM JS -->
     <script src="/js/menu.js" defer></script>
-
     {{{head}}}
 </head>
 <body>
     <!--title-->
-    <section class="descriptionWindow">
-        <head class="headDescription">
-            <div class="navbar">
-                <ul class="titleDesciption">
-                    <span class="des">Empresas</span>
-                </ul>
-            </div>
-        </head>
-    </section>  
+    {{>titleBar}}
 
     {{{body}}}
 
-    {{>menu}}
     <!--footer-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/sweetAlert.js"></script>
 </body>
 </html>

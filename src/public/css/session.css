@@ -1,6 +1,6 @@
 .body-session{
     height: 100%;
-    background: linear-gradient(to right, rgb(57,78,194),rgb(97, 53, 253));
+    background: linear-gradient(to right, var(--color-session1),var(--color-session2));
 }
 
 .title-session{
@@ -26,7 +26,7 @@
 
 .link-singUp{
     font-size: 15px;
-    color: rgb(57,78,194);
+    color: var(--color-company);
     text-decoration: none;
 }
 

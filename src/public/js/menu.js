@@ -1,21 +1,14 @@
-const toggle = document.querySelector(".toggle")
-const menuDashboard = document.querySelector(".menu-dashboard")
-const iconoMenu = toggle.querySelector("i")
-const enlacesMenu = document.querySelectorAll(".enlace")
+const openMenu=document.querySelector("#open-menu-store");
+const closeMenu=document.querySelector("#close-menu-store");
+const aside=document.querySelector("aside");
 
-toggle.addEventListener("click", () => {
-    menuDashboard.classList.toggle("open")
+openMenu.addEventListener("click",()=>{
+    aside.classList.add("aside-visible");
+});
 
-    if(iconoMenu.classList.contains("bx-menu")){
-        iconoMenu.classList.replace("bx-menu", "bx-x")
-    }else {
-        iconoMenu.classList.replace("bx-x", "bx-menu")
-    }
-})
 
-enlacesMenu.forEach(enlace => {
-    enlace.addEventListener("click", () => {
-        menuDashboard.classList.add("open")
-        iconoMenu.classList.replace("bx-menu", "bx-x")
-    })
-})
+closeMenu.addEventListener("click",()=>{
+    aside.classList.remove("aside-visible");
+});
+
+console.log('ads');

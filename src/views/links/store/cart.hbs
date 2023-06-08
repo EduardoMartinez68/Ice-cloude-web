@@ -5,7 +5,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <aside>
+        <header class="header-mobile">
+            <button class="open-menu-store" id="open-menu-store"><i class="fi fi-rr-menu-burger"></i></button>
+        </header>
+
+        <aside class="">
+            <button class="close-menu-store" id="close-menu-store"><i class="fi fi-rr-x"></i></button>
             <header>
                 <h1 class="logo"></h1>
             </header>
@@ -39,10 +44,6 @@
                             <small>amount</small>
                             <p>1</p>
                         </div>
-                        <div class="cart-product-quantity">
-                            <small>Subtotal</small>
-                            <p>69</p>
-                        </div>
                         <div class="cart-product-discount">
                             <small>Discount</small>
                             <p>0</p>
@@ -51,7 +52,7 @@
                             <small>Total</small>
                             <p>69</p>
                         </div>
-                        <button class="cart-delete-product"><i class="fi fi-rs-trash"></i></button>
+                        <button class="cart-delete-product" onclick="questionMessage('Eliminar el producto','Esta seguro de querer eliminar el propducto?')"><i class="fi fi-rs-trash"></i></button>
                     </div>
                     <!--for-->
 
@@ -76,5 +77,6 @@
 
         </main>
     </div>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

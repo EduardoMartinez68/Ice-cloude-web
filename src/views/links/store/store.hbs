@@ -5,7 +5,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <aside>
+        <header class="header-mobile">
+            <button class="open-menu-store" id="open-menu-store"><i class="fi fi-rr-menu-burger"></i></button>
+        </header>
+
+        <aside class="">
+            <button class="close-menu-store" id="close-menu-store"><i class="fi fi-rr-x"></i></button>
             <header>
                 <h1 class="logo"></h1>
             </header>
@@ -31,7 +36,7 @@
                     <div class="product-character">
                         <h3 class="product-name">Hamburger</h3>
                         <p class="product-price">69</p>
-                        <button class="btn-add-product">Add</button>
+                        <button class="btn-add-product" onclick="notificationMessage('Hamburger','Se agrego este pedido al carrito')">Add</button>
                     </div>
                 </div>
 
@@ -49,5 +54,6 @@
 
         </main>
     </div>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@ pool.query('SELECT * FROM productos', (err, result) => {
         console.log('Datos seleccionados:', rows);
     }
 });*/
+
+///links of the web
 router.get('/login',(req,res)=>{
     res.render('links/web/login');
 })
@@ -27,6 +29,8 @@ router.get('/terms_conditions',(req,res)=>{
     res.render('links/web/terms_conditions');
 })
 
+
+///links of the store
 router.get('/store',(req,res)=>{
     res.render('links/store/store');
 })
@@ -38,11 +42,14 @@ router.get('/cart',(req,res)=>{
 
 
 
-
+///links of the manager
 router.get('/addEmployee',(req,res)=>{
     res.render('links/manager/addEmployee');
 })
 
+router.get('/addSchedules',(req,res)=>{
+    res.render('links/manager/addSchedules');
+})
 
 router.get('/home',(req,res)=>{
     res.render('links/manager/home');
@@ -55,4 +62,7 @@ router.get('/addCompany',(req,res)=>{
 router.post('/addCompany',(req,res)=>{
     res.send("recived");
 })
+
+
+
 module.exports=router;

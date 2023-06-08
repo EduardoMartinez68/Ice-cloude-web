@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/manager/schedules.css">
+</head>
+<body>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <center><h2 class="title-schedules">SCHEDULES SETTING</h2></center>
+                        <br>
+                        <table class="table-data-schedules">
+                            <tr>
+                                <th><lable>Name *</lable><br></th>
+                                <th><lable>Description *</lable></th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="form-control" placeholder="Schedules name"></td>
+                                <td><input type="tex" class="form-control" placeholder="Description"></td>
+                            </tr>
+                            <tr>
+                                <td><lable>Color</lable></th>
+                                <td><lable>Tolerance time (minutes)</lable></td>
+                            </tr>
+                            <tr>
+                                <td><input type="color" id="colorPicker" class="form-control form-control-color"></td>
+                                <td><input type="number" id="numero" class="form-control" min="0" step="any" value="0"></td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <hr>
+                        <center>
+                            <table class="my-schedules">
+                                <tr>
+                                    <th></th>
+                                    <th><center>Day</center></th>
+                                    <th><center>Entry time</center></th>
+                                    <th></th>
+                                    <th><center>Departure</center></th>
+                                    <th></th>
+                                    <th><center>Subtotal</center></th>
+                                </tr>
+                                <tr>
+                                    <td class="td-add-schedules schedule-active"><button class="btn-add-schedules" id="btn-on-monday"><i class="fi-add-schedules fi-sr-clock-three" id="i-on-monday"></i></button></td>
+                                    <td>Monday</td>
+                                    <td>
+                                        <input type="time" class="form-control" id="starMonday" disabled="false">
+                                    </td>
+                                    <td class="td-delete"><button class="btn-delate-schedules"><i class="fi-schedules fi-br-cross-small"></i></button></td>
+                                    <td>
+                                        <input type="time" class="form-control" disabled="false" id="finishMonday"> 
+                                    </td>
+                                    <td class="td-delete"><button class="btn-delate-schedules"><i class="fi-schedules fi-br-cross-small"></i></button></td>
+                                    <td><label class="hrs-schedule">8</label><label class="hrs-schedule">h</label><label>0</label><label class="m-schedule">m</label></td>
+                                </tr>
+
+                                <tr>
+
+                                </tr>
+
+                                <!--total-->
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td></td>
+                                    <td class="td-delete"></td>
+                                    <td></td>
+                                    <td class="td-delete"></td>
+                                    <td><label class="hrs-schedule" id="totalHourse">16</label><label class="hrs-schedule">h</label><label>0</label><label class="m-schedule">m</label></td>
+                                </tr>
+                            </table>
+                        </center>
+
+                        <button class="btn btn-success btn-block">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/manager/schedules.js"></script>
+
+    <script>
+        // Obtener el campo de entrada
+        const inputNumero = document.getElementById('numero');
+
+        // Agregar un evento de escucha para el evento de entrada de teclado
+        inputNumero.addEventListener('keypress', function(event) {
+        const charCode = event.which ? event.which : event.keyCode;
+        if (charCode < 48 || charCode > 57) {
+            event.preventDefault(); // Prevenir la entrada de caracteres no numéricos
+        }
+        });
+
+
+    </script>
+</body>
+</html>
