@@ -3,6 +3,7 @@ const morgan=require('morgan');
 const {engine}=require('express-handlebars');
 const path=require('path');
 
+
 //initializations 
 const app=express();
 
@@ -40,4 +41,22 @@ app.use(express.static(path.join(__dirname,'public')));
 //starting the server
 app.listen(app.get('port'),()=>{
     console.log('server on port ',app.get('port'));
+});
+
+//python
+const {spawn}=require('child_process');
+const pythonPath='src/dataScine/script.py';
+const arg=['a','a'];
+const pythonProcess=spawn('python',[pythonPath,...arg]);
+pythonProcess.stdout.on('data',(data)=>{
+    const output=data.toString();
+    console.log('salida del script python: ', output);
+});
+pythonProcess.stderr.on('data',(data)=>{
+    const output=data.toString();
+    console.log('salida del script python: ${output}', output);
+});
+pythonProcess.on('close',(code)=>{
+    const output=code.toString();
+    console.log('python a cerrado ',output);
 });
